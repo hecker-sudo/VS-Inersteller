@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="shortcut icon"
+      href="images/classroom.png"
+      type="image/png"
+    />
+    <title> Google Classroom </title>
+
+    <link rel="stylesheet" href="css/master.css" />
+    <link rel="stylesheet" href="button/button.css" />
+
+    <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
+    <script src="/uv/uv.config.js"></script>
+    <script src="./js/preload.js"></script>
+  </head>
+
+  <body theme="main">
+    <nav>
+      <div class="logo">
+        
+        <h1>VS Inersteller</h1>
+      </div>
+
+      <p id="time"></p>
+
+      <div class="navitems">
+        <div class="navitem"><a selected href="class2.html">Home</a></div>
+        <div class="navitem"><a href="classes.html">Games</a></div>
+        <div class="navitem"><a href="updates.html">Updates</a></div>
+        <div class="navitem"><a href="math.html">Search</a></div>
+      </div>
+    </nav>
+
+    <div class="center-container">
+      <h1>Welcome to <span>VS Inersteller</span></h1>
+      
+      Hello, We are back after some Copyright Issues!
+      <br>
+      We will procede to make this website better and faster!
+      <br>
+      Some of the channels are deleted due to maintainence issues!
+      <br>
+      Thank You for using our services!
+      <br>
+      <br>
+      <i>Made with Love by VS Inersteller Team.</i>
+    
+
+
+      <p id="splash"></p>
+      <br />
+      <button
+      
+        class="button play"
+      >
+        Join our Discord
+      </button>
+      <button onclick="launchab()" id="launchab" class="button play">
+        Launch in about:blank
+      </button>
+
+      <br>
+
+
+      <i> Please do note that all the Copyright does not belong to us ! | Please contact me if you want to remove something that belongs to you or your team | </i>
+      <br>
+      
+    </div>
+
+    <div class="links">
+      <div class="left">
+        <a href="#">GitHub</a>
+        <a href="#">Discord</a>
+      </div>
+
+      <div class="right">
+        <a href="./settings.html">Settings</a>
+        <a href="#">About</a>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    fetch('./assets/data/splash.json')
+      .then((res) => res.json())
+      .then((data) => {
+        document.querySelector('#splash').innerHTML =
+          data[Math.floor(Math.random() * data.length)]
+      })
+  </script>
+
+  <script src="./js/index.js"></script>
+</html>
